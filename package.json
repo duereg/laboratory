@@ -1,7 +1,7 @@
 {
   "name": "laboratory",
   "main": "lib/index.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple client/server A/B testing framework",
   "scripts": {
     "build": "./node_modules/.bin/coffee -o lib -c src/*.coffee",
