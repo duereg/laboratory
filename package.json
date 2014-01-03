@@ -1,9 +1,10 @@
 {
   "name": "laboratory",
   "main": "lib/index.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple client/server A/B testing framework",
   "scripts": {
+    "build": "./node_modules/.bin/coffee -o lib -c src/*.coffee",
     "test": "./node_modules/.bin/jasmine-node jasmine-node --coffee spec/*.spec.coffee --verbose",
     "prepublish": "./node_modules/.bin/coffee -o lib -c src/*.coffee"
   },
