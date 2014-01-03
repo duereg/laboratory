@@ -1,0 +1,23 @@
+{
+  "name": "laboratory",
+  "main": "lib/index.js",
+  "version": "0.0.1",
+  "description": "Simple client/server A/B testing framework",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node jasmine-node --coffee spec/*.spec.coffee --verbose",
+    "prepublish": "./node_modules/.bin/coffee -o lib -c src/*.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duereg/laboratory"
+  },
+  "devDependencies": {
+    "jasmine-node": "~1.12.0",
+    "coffee-script": "~1.6.3"
+  },
+  "author": "Matt Blair",
+  "bugs": {
+    "url": "https://github.com/duereg/laboratory/issues"
+  },
+  "homepage": "https://github.com/duereg/laboratory"
+}
