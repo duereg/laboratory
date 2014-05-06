@@ -1,4 +1,8 @@
-laboratory
+[![Build Status](https://travis-ci.org/duereg/laboratory.png)](https://travis-ci.org/duereg/laboratory)
+[![Dependencies](https://david-dm.org/duereg/laboratory.png)](https://david-dm.org/duereg/laboratory)
+[![devDependencies](https://david-dm.org/duereg/laboratory/dev-status.png)](https://david-dm.org/duereg/laboratory#info=devDependencies&view=table)
+
+Laboratory
 ==========
 
 Simple A/B Testing Framework for both client and server environments.
