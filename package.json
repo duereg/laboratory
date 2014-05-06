@@ -13,8 +13,8 @@
     "url": "https://github.com/duereg/laboratory"
   },
   "devDependencies": {
-    "jasmine-node": "~1.12.0",
-    "coffee-script": "~1.6.3"
+    "jasmine-node": "~1.14.3",
+    "coffee-script": "~1.7.1"
   },
   "author": "Matt Blair",
   "bugs": {
