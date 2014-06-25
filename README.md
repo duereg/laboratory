@@ -8,11 +8,37 @@ Laboratory
 
 Simple A/B Testing Framework for both client and server environments.
 
+Laboratory chooses a variant for each experiment based on a configurable probability.  Use the pluggable storage interface to serve users a consistent experience after they've been assigned a variant.
+
+```sh
+$ npm install laboratory
+```
 
 ### Example Usage ###
 
+Run a single Experiment:
+
+``` coffeescript
+{Experiment} = require "laboratory"
+
+experiment = new Experiment("color")
+  .variant "red", 50, "#FF0000"
+  .variant "blue", 50, "#0000FF"
+
+variant = experiment.run()
+variant.name # Either red or blue
+variant.value # Either FF0000 or 0000FF
+```
+
+Run a suite of experiments in a Laboratory:
+
 ```coffeescript
+{Laboratory} = require "laboratory"
 laboratory = new Laboratory()
+
+laboratory.addExperiment("color")
+  .variant "red", 50, "#FF0000"
+  .variant "blue", 50, "#0000FF"
 
 laboratory.addExperiment("FuzzyBunnies")
   .variant "variant0", 50,
@@ -26,3 +52,12 @@ experiment = laboratory.run("FuzzyBunnies")
 experiment.value # Either Peter or Briar Rabbit
 ```
 
+Store the results per user in browser local storage:
+
+``` coffeescript
+store = new LocalStorageStore() # not included
+laboratory = new Laboratory(store)
+
+laboratory.addExperiment /* ... */
+laboratory.run /* ... */
+```
