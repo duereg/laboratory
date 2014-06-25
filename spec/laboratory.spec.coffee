@@ -1,4 +1,5 @@
 Laboratory = require '../src/laboratory'
+MemoryStore = require '../src/memory_store'
 
 describe 'Laboratory', ->
   {laboratory} = {}
@@ -44,4 +45,14 @@ describe 'Laboratory', ->
     describe 'on undefined experiment', ->
       it 'returns undefined', ->
         expect(laboratory.run('somethingThatDoesNotExist')).toBeFalsy()
+
+  describe 'given a store', ->
+    {store} = {}
+
+    beforeEach ->
+      store = new MemoryStore()
+      laboratory = new Laboratory(store)
+
+    it 'passes the store to all experiments', ->
+      expect(laboratory.addExperiment("addToOrder").store).toBe store
 
