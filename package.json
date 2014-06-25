@@ -4,9 +4,9 @@
   "version": "0.0.4",
   "description": "Simple client/server A/B testing framework",
   "scripts": {
-    "build": "./node_modules/.bin/coffee -o lib -c src/*.coffee",
-    "test": "./node_modules/.bin/jasmine-node jasmine-node --coffee spec/*.spec.coffee --verbose",
-    "prepublish": "./node_modules/.bin/coffee -o lib -c src/*.coffee"
+    "build": "coffee -o lib -c src/*.coffee",
+    "test": "jasmine-node --coffee spec/*.spec.coffee --verbose",
+    "prepublish": "coffee -o lib -c src/*.coffee"
   },
   "repository": {
     "type": "git",
