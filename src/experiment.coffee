@@ -12,7 +12,7 @@ class Experiment
 
   run: ->
     if (variantName = @store?.get(@name))?
-      @chosen = _(@_variants).find (v) -> v.name is variantName
+      [@chosen] = @_variants.filter (v) -> v.name is variantName
       if @chosen?
         @chosen.value?()
     else
