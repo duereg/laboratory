@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/duereg/laboratory.png)](https://travis-ci.org/duereg/laboratory)
-[![Dependencies](https://david-dm.org/duereg/laboratory.png)](https://david-dm.org/duereg/laboratory)
-[![devDependencies](https://david-dm.org/duereg/laboratory/dev-status.png)](https://david-dm.org/duereg/laboratory#info=devDependencies&view=table)
+[![Build Status](https://travis-ci.org/duereg/laboratory.svg)](https://travis-ci.org/duereg/laboratory)
+[![Dependencies](https://david-dm.org/duereg/laboratory.svg)](https://david-dm.org/duereg/laboratory)
+[![devDependencies](https://david-dm.org/duereg/laboratory/dev-status.svg)](https://david-dm.org/duereg/laboratory#info=devDependencies&view=table)
 [![NPM version](https://badge.fury.io/js/laboratory.svg)](http://badge.fury.io/js/laboratory)
 
 Laboratory
