@@ -13,7 +13,7 @@
     "url": "https://github.com/duereg/laboratory"
   },
   "devDependencies": {
-    "jasmine-node": "~1.14.3",
+    "jasmine-node": "https://github.com/clickinnovation/jasmine-node/tarball/1.14.3-jasmine-reporters-patch",
     "coffee-script": "~1.7.1"
   },
   "author": "Matt Blair",
