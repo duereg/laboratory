@@ -1,4 +1,12 @@
 language: node_js
 node_js:
-  - "0.11"
-  - "0.10"
+- '0.11'
+- '0.10'
+deploy:
+  provider: npm
+  email: matt@mattblair.co
+  api_key:
+    secure: OpQl86fDlvT4EpN7vUnTxpnypIZhD+5uvWU6NZedBShvR9flgKwfeh7t3fqRit1WkyEzXJAoZB4t5ykbqW2Szl8VNPXwKAnBv+sO0SKZarRSsNSm1++iVlqrxILD5Gi0T6NQnzpals99TdQNYGBu4ABUvvugVUDLdYxkywSQ1OE=
+  on:
+    tags: true
+    repo: duereg/laboratory
