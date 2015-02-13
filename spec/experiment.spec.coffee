@@ -1,5 +1,5 @@
-Experiment = require '../src/experiment'
-MemoryStore = require '../src/memory_store'
+Experiment = require '../lib/experiment'
+MemoryStore = require '../lib/memory_store'
 
 describe 'Experiment', ->
   {experiment, variant} = {}
