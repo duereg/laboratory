@@ -1,5 +1,5 @@
-Laboratory = require '../src/laboratory'
-MemoryStore = require '../src/memory_store'
+Laboratory = require '../lib/laboratory'
+MemoryStore = require '../lib/memory_store'
 
 describe 'Laboratory', ->
   {laboratory} = {}

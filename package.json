@@ -6,7 +6,8 @@
   "scripts": {
     "build": "coffee -o lib -c src/*.coffee",
     "test": "jasmine-node --coffee spec/*.spec.coffee --verbose",
-    "prepublish": "coffee -o lib -c src/*.coffee"
+    "prepublish": "npm run build",
+    "pretest": "npm run build"
   },
   "repository": {
     "type": "git",
