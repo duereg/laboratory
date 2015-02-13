@@ -98,3 +98,13 @@ describe 'Experiment', ->
           expect(uniqueVariants).toEqual ['cotton_tail']
 
 
+      describe 'with a stored invalid variant', ->
+        beforeEach ->
+          store = new MemoryStore()
+          store.addResult experiment.name, 'big_bad_bogus_wolf'
+          experiment.store = store
+          uniqueVariants = run100Times()
+
+        it 'chooses a new variant', ->
+          expect(uniqueVariants.length).toBe 1
+          expect(uniqueVariants).not.toEqual ['big_bad_bogus_wolf']
