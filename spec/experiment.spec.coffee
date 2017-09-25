@@ -53,6 +53,29 @@ describe 'Experiment', ->
         expect(experiment.chosen.name).toBe "peter_rabbit"
         expect(experiment.chosen.value).toEqual "gray"
 
+    describe 'with a 50/50 A/B test', ->
+      beforeEach ->
+        experiment.variant "cotton_tail", 50, "white"
+        experiment.variant "peter_rabbit", 50, "gray"
+
+      it 'returns a variant A half the time', ->
+        spyOn(Math, 'random')
+        for value in [0, .49]
+          Math.random.and.returnValue(value)
+          retValue = experiment.run()
+          expect(retValue).toBeTruthy()
+          expect(retValue.name).toBe "cotton_tail"
+          expect(retValue.value).toEqual "white"
+
+      it 'returns a variant B half the time', ->
+        spyOn(Math, 'random')
+        for value in [.5, .99]
+          Math.random.and.returnValue(value)
+        retValue = experiment.run()
+        expect(retValue).toBeTruthy()
+        expect(retValue.name).toBe "peter_rabbit"
+        expect(retValue.value).toEqual "gray"
+
     describe 'when the experiment has a store', ->
       {store} = {}
 
