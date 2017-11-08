@@ -24,10 +24,10 @@ class Experiment
 
       # make the choice
       i = 0
-      rand = Math.random() * (100 - 1) + 1
+      rand = Math.random() * 100
       for variant in @_variants
         i += variant.pct
-        if i >= rand
+        if i > rand
           chosen = variant
           break
 
